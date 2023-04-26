@@ -1,4 +1,12 @@
 <?php
+$mysql_hostname = "localhost";
+$mysql_user = "root";
+$mysql_password = "";
+$mysql_database = "cms";
+$bd = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password, $mysql_database) or die("Could not connect database");
+
+?>
+<?php
 session_start();
 error_reporting(1);
 include('includes/config.php');

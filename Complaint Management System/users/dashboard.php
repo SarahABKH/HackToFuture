@@ -69,7 +69,7 @@ $num1 = mysqli_num_rows($rt);
 {?>
 					  			<h3><?php echo htmlentities($num1);?></h3>
                   			</div>
-					  			<p><?php echo htmlentities($num1);?> Complaints not Process yet</p>
+					  			<p><?php echo htmlentities($num1);?>Requests not Process yet</p>
                   		</div>
                       <?php }?>
 
@@ -84,7 +84,7 @@ $num1 = mysqli_num_rows($rt);
 {?>
                   <h3><?php echo htmlentities($num1);?></h3>
                         </div>
-                  <p><?php echo htmlentities($num1);?> Complaints Status in process</p>
+                  <p><?php echo htmlentities($num1);?>Requests Status in process</p>
                       </div>
   <?php }?>
 
@@ -98,7 +98,7 @@ $num1 = mysqli_num_rows($rt);
 {?>
                   <h3><?php echo htmlentities($num1);?></h3>
                         </div>
-                  <p><?php echo htmlentities($num1);?> Complaint has been closed</p>
+                  <p><?php echo htmlentities($num1);?> Request has been closed</p>
                       </div>
 
 <?php }?>

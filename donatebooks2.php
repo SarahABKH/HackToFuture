@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<?php
+$mysql_hostname = "localhost";
+$mysql_user = "root";
+$mysql_password = "";
+$mysql_database = "cms";
+$bd = mysqli_connect($mysql_hostname, $mysql_user, $mysql_password, $mysql_database) or die("Could not connect database");
+
+?>
+<?php
+	// check if form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+ 
+echo '<script> alert("Your donation has been successfully filed ")</script>';
+}
+?>
 <html lang="en">
 
 <head>
@@ -38,64 +53,62 @@
     </div>
     <nav class="bg-white navbar navbar-expand-lg navbar-light sticky-top p-0"><a class="navbar-brand d-flex align-items-center px-4 px-lg-5" href="index.html"><h1 class="m-0">Sansar</h1></a><button class="navbar-toggler me-4" data-bs-toggle="collapse" type="button" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="ms-auto navbar-nav p-4 p-lg-0"><a href="index.html" class="nav-item nav-link active">Home</a><a class="nav-item nav-link" href="#about1">About</a><a class="nav-item nav-link" href="#services1">Services</a><a class="nav-item nav-link" href="#team1">Team</a>
+            <div class="ms-auto navbar-nav p-4 p-lg-0"><a class="nav-item nav-link" href="index.html">Home</a><a class="nav-item nav-link" href="#about1">About</a><a class="nav-item nav-link" href="#services1">Services</a><a class="nav-item nav-link" href="#team1">Team</a>
                 <div class="nav-item dropdown">
                     <div class="bg-light dropdown-menu m-0"><a href="feature.html" class="dropdown-item">Features</a><a href="quote.html" class="dropdown-item">Free Quote</a><a href="team.html" class="dropdown-item">Our Team</a><a href="testimonial.html" class="dropdown-item">Testimonial</a><a href="404.html" class="dropdown-item">404 Page</a></div>
                 </div><a href="contact.html" class="nav-item nav-link">Contact</a>
             </div><a class="btn btn-primary d-none d-lg-block py-4 px-lg-4 rounded-0" role="button" href="">Register</a>
         </div>
     </nav>
-    <div class="container py-4 py-xl-5">
-        <div class="row mb-5">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h2>Clothes Donation Pick-Up</h2>
-                <p>&nbsp;Before you book a pick-up please ensure the following standards are met from your side for a quick and beneficial donation.</p>
+    <div class="row mb-5">
+        <div class="col-md-8 col-xl-6 text-center mx-auto">
+            <h2>Book Donation Pick-Up</h2>
+            <p>&nbsp;Before you book a pick-up please ensure the following standards are met from your side for a quick and beneficial donation.</p>
+        </div>
+    </div>
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+        <div class="col">
+            <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/alfons-morales-YLSwjSy7stw-unsplash.jpg">
+                <div class="card-body p-4">
+                    <h4 class="card-title">&nbsp;<strong>Condition</strong></h4>
+                    <p class="card-text">&nbsp;Ensure that the books you want to donate are in good condition, with no missing pages, water damage, or excessive wear and tear. Most organizations that accept book donations prefer books that are gently used and in good condition.</p>
+                    <div class="d-flex">
+                        <div></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-            <div class="col">
-                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/Stack-Clean-Color-Shirts-White-Basket_Tide-Life-Objects_SIDE-ANGLE-282_1440x812.jpg">
-                    <div class="card-body p-4">
-                        <h4 class="card-title">Clean And Intact Clothes</h4>
-                        <p class="card-text">Check the condition of the clothes: Donated clothes should be clean, free of holes, tears, or stains. Clothes that are too worn out should not be donated as they may not be usable by others. .Prior to donating wash clothes and fold them neatly.</p>
-                        <div class="d-flex">
-                            <div></div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body p-4">
+                    <div class="carousel slide" data-bs-ride="false" id="carousel-1">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/bag1.jpeg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/miami-floridainternational-book-fair-festival-annual-books-sale-display-organized-boxes-natural-american-history-2D714R6.jpg" alt="Slide Image"></div>
+                            <div class="carousel-item"><img class="w-100 d-block" src="assets/img/Clothes-donation.max-784x410.jpg" alt="Slide Image"></div>
                         </div>
+                        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                        <ol class="carousel-indicators">
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                            <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
+                        </ol>
+                    </div>
+                    <h4 class="card-title">Pack Books in Carton Boxes or Bags</h4>
+                    <p class="card-text">You can pack your donations in any carton boxes or blue disposable bags or any shopping bags. Please refer to images packing done by our donors.</p>
+                    <div class="d-flex">
+                        <div></div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body p-4">
-                        <div class="carousel slide" data-bs-ride="false" id="carousel-1">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/bag1.jpeg" alt="Slide Image"></div>
-                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/clothes-plastic-bags-everyday-clothes-packed-plastic-bags-179130836.jpg" alt="Slide Image"></div>
-                                <div class="carousel-item"><img class="w-100 d-block" src="assets/img/Clothes-donation.max-784x410.jpg" alt="Slide Image"></div>
-                            </div>
-                            <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
-                            <ol class="carousel-indicators">
-                                <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
-                                <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
-                                <li data-bs-target="#carousel-1" data-bs-slide-to="2"></li>
-                            </ol>
-                        </div>
-                        <h4 class="card-title">Pack Clothes in Carton Boxes or Bags</h4>
-                        <p class="card-text">You can pack your donations in any carton boxes or blue disposable bags or any shopping bags. Please refer to images packing done by our donors.</p>
-                        <div class="d-flex">
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/fashion-closet-clothing.jpeg">
-                    <div class="card-body p-4">
-                        <h4 class="card-title">Clothing that are not accepted</h4>
-                        <p class="card-text">Some items, such as undergarments or swimsuits, are not suitable for donation. Make sure to only donate items that can be reused.</p>
-                        <div class="d-flex">
-                            <div></div>
-                        </div>
+        </div>
+        <div class="col">
+            <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="assets/img/child-reading-under-tree.jpg">
+                <div class="card-body p-4">
+                    <h4 class="card-title">Language</h4>
+                    <p class="card-text">Please donate locally known languages such as English, Hindi and Kannada.&nbsp;</p>
+                    <div class="d-flex">
+                        <div></div>
                     </div>
                 </div>
             </div>
@@ -108,19 +121,46 @@
                     <div class="card mb-5">
                         <div class="card-body p-sm-5 mt-md- me-md-0 ms-md-" style="--bs-body-bg: var(--secondary);background: var(--primary);">
                             <h2 class="text-center mb-4">Pick-Up Request</h2>
-                            <form method="post">
-                                <div class="mb-3"><input class="form-control" type="text" id="name-2" name="name" placeholder="Name"></div>
-                                <div class="mb-3"><input class="form-control" type="email" id="email-2" name="email" placeholder="Email"></div>
-                                <div></div>
-                                <div class="mb-3"><input class="form-control pb-md- pb-md-3 mb-md-4" type="tel" placeholder="Phone Number" pattern="^(\+91[\-\s]?)?[0]?(91)?[789]\d{9}$" required=""><textarea class="form-control mt-md-2 pt-md-0" id="message-2" name="message" rows="6" placeholder="Pick Up Point"></textarea></div>
-                                <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1" style="background: var(--primary);color: var(--light);">T-Shirts</label></div><input class="form-control" type="number">
-                                <div></div>
-                                <div>
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2" style="color: var(--light);">Pants</label></div><input class="form-control" type="number">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3" style="color: var(--light);">Kurtas</label></div><input class="form-control" type="number">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4" style="color: var(--light);">Dresses</label></div><input class="form-control" type="number">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5" style="color: var(--light);">Shawls/Jackets</label></div><input class="form-control" type="number"><label class="form-label" style="color: var(--light);">Total Count:</label><input class="form-control-plaintext mb-md-4" type="text" value="0" readonly="" style="color: var(--light);"><button class="btn btn-primary d-block w-100" type="submit" style="background: var(--light);color: var(--dark);">Send </button>
-                                </div>
+                            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" >
+                                <label for="name">Name:</label>
+		<input type="text" id="name" name="name" required="required"><br><br>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required="required"><br><br>
+
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" name="phone" required="required"><br><br>
+
+		<label for="address">Address:</label>
+		<input type="text" id="address" name="address" required="required"><br><br>
+
+		<label for="check1">Childrens Books</label>
+		<input type="checkbox" id="check1" name="check[]" value="1">
+		<label for="count1">Count :</label>
+		<input type="number" id="count1" name="count[]" value="0"><br><br>
+
+		<label for="check2">Novels</label>
+		<input type="checkbox" id="check2" name="check[]" value="2">
+		<label for="count2">Count :</label>
+		<input type="number" id="count2" name="count[]" value="0"><br><br>
+
+		<label for="check3">Magazines</label>
+		<input type="checkbox" id="check3" name="check[]" value="3">
+		<label for="count3">Count :</label>
+		<input type="number" id="count3" name="count[]" value="0"><br><br>
+
+		<label for="check4">Non Fiction</label>
+		<input type="checkbox" id="check4" name="check[]" value="4">
+		<label for="count4">Count :</label>
+		<input type="number" id="count4" name="count[]" value="0"><br><br>
+
+		<label for="check5">Autobiographies</label>
+		<input type="checkbox" id="check5" name="check[]" value="5">
+		<label for="count5">Count :</label>
+		<input type="number" id="count5" name="count[]" value="0"><br><br>
+
+		<input type="submit" value="Submit">
+                                 
                             </form>
                         </div>
                     </div>
@@ -152,13 +192,6 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0"><span> © </span><a class="border-bottom" href="#">Sansar</a><span>, All Right Reserved. </span></div>
-                <div class="col-md-6 text-center text-md-end"><span>&nbsp;</span></div>
-            </div>
-        </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
