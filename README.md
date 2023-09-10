@@ -10,7 +10,7 @@ Sansar is a user-friendly website designed to address the waste disposal problem
 
 
 
-![website](sansar2.pn)
+![website](sansar2.png)
 
 
 With Sansar, you can:
