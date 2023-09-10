@@ -6,11 +6,11 @@
 
 Sansar is a user-friendly website designed to address the waste disposal problem and promote a sustainable approach to waste management. It offers a range of features that empower users to make responsible choices when it comes to waste disposal and recycling. 
 
-![website][sansar1.png]
+![website](sansar1.png)
 
 
 
-![website][sansar2.png]
+![website](sansar2.pn)
 
 
 With Sansar, you can:
