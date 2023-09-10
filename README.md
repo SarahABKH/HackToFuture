@@ -1,6 +1,6 @@
 # Sansar
 
-![Sansar Logo](sansar-logo.png)
+![Sansar Logo](assets/img/icon/icon-2.png)
 
 ## Description
 
